@@ -4,15 +4,8 @@
 class users extends Phalcon\Mvc\Model
 {
     public $id;
-    public $firstName;
-    public $lastName;
-    public $emailAddress;
-    public $level;
     public $password;
-    public $lastLogin;
-
-    public $friendlyLevel;
-    public $friendlyTime;
+    public $admin;
 
 
     public function initialize()

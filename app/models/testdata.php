@@ -1,7 +1,7 @@
 <?php
 
 
-class tracks extends Phalcon\Mvc\Model
+class testdata extends Phalcon\Mvc\Model
 {
     public $id;
     public $long;
@@ -9,7 +9,7 @@ class tracks extends Phalcon\Mvc\Model
     public $elevation;
     public $speed;
     public $timestamp;
-    public $distance;
+    public $used;
 
     public function initialize()
     {
