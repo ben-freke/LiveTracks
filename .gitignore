@@ -2,6 +2,6 @@
 .idea/*
 *.sublime-project
 *.sublime-workspace
-config.php
+config/config.php
 app/compiled/*
 testdata.php

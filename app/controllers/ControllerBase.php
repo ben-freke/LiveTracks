@@ -2,7 +2,7 @@
 
 class ControllerBase extends \Phalcon\Mvc\Controller
 {
-
+//
     public function getConf($variable)
     {
         if ($variable == null)
