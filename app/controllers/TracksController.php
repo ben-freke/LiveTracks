@@ -15,15 +15,18 @@ class TracksController extends ControllerBase
 
     public function liveAction($number)
     {
-        if (is_numeric($number) && $number < 10)
+        if (is_numeric($number) && $number > 0)
         {
             $latestTrack = tracks::find(array(
                 "order" => "timestamp DESC",
                 "limit" => $number
             ));
             return json_encode($latestTrack);
-        } else
-            echo "Incorrect Params.";
+        } elseif ($number == 0) {
+            $latestTrack = tracks::find(array(
+                "order" => "timestamp DESC"));
+            return json_encode($latestTrack);
+        } else echo "Incorrect Params.";
         return null;
     }
 
