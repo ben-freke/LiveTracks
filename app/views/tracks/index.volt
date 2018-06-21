@@ -95,6 +95,7 @@
 
     function drawTracks()
     {
+        trackCoordinates = [];
         for (var i = 0; i < positions.length; i++) trackCoordinates.push({lat: positions[i]['lat'], lng: positions[i]['long']})
         trackLine = new google.maps.Polyline({
             path: trackCoordinates,
