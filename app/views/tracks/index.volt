@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script
             src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -12,16 +12,26 @@
             height: 100vh;
             width: 100%;
         }
+        @media (max-width: 991px) {
+            #map {
+                height: 60vh;
+                width: 100%;
+            }
+            #stats {
+                height: 40vh;
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
-<div class="container-large-desktop">
     <div class="row">
         <div class="col-md-9">
             <div id="map"></div>
         </div>
         <div class="col-md-3">
-            <table class="table table-dark">
+            <br>
+            <table class="table" id="stats">
                 <tbody>
                 <tr>
                     <td><b>Last Update</b></td>
@@ -50,7 +60,6 @@
                 </tr>
                 </tbody>
             </table>
-            <p id="travelled"></p>
         </div>
     </div>
 </div>
