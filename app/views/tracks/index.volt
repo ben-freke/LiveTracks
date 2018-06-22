@@ -150,13 +150,24 @@
 
     }
 
-    function updateDistance()
+    function getTime()
     {
-        var updateSpan = document.getElementById('update');
+        var diffHrs;
         var date1 = new Date(positions[0]['timestamp']);
         var date2 = new Date(Date.now());
         var timeDiff = Math.abs(date2.getTime() - date1.getTime());
-        var diffHrs = Math.ceil(timeDiff / (60 * 1000));
+        var diffMin = Math.ceil(timeDiff / (60 * 1000));
+        if (diffMin > 59)
+        {
+            diffHrs = diffMin / 60;
+            diffMin = diffMin % 60;
+            return Math.floor(diffHrs) + " hrs " + diffMin + " mins"
+        } else return diffMin;
+    }
+
+    function updateDistance()
+    {
+        var updateSpan = document.getElementById('update');
         var lastSpeedSpan = document.getElementById('speed');
         var travelledSpan = document.getElementById('travelled');
         var remainingSpan = document.getElementById('remaining');
@@ -166,7 +177,7 @@
         travelledSpan.innerHTML = parseFloat(positions[0]['distance']).toFixed((2)) + " km";
         remainingSpan.innerHTML = parseFloat(remaining).toFixed((2)) + " km";
         percentageSpan.innerHTML = parseFloat(percentage).toFixed((2)) + "%";
-        updateSpan.innerHTML = diffHrs + " mins";
+        updateSpan.innerHTML = getTime();
         lastSpeedSpan.innerHTML = positions[0]['speed'] + " mph";
 
     }
