@@ -75,7 +75,7 @@
     var markerPos;
     var updateFlag = true;
     var pollDelay = 5000;
-    var totalDistance = 2735;
+    var totalDistance = 2203;
     var travelledDistance = 0;
     var follow = true;
     var trackCoordinates = [];
