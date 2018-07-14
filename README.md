@@ -7,10 +7,10 @@ LiveTracks is a PHP Application which uses the FollowMee web application to disp
 This project is not finished. The following tasks are going to be completed soon:
 
 1. Allow for all variables to be configurable, including:
-⋅⋅* Logo;
-⋅⋅* Tracking / Update Frequency;
-⋅⋅* Map Type;
-⋅⋅* FollowMee API Key; 
+  * Logo;
+  * Tracking / Update Frequency;
+  * Map Type;
+  * FollowMee API Key; 
 2. Automated Server Installation;
 
 Long term goals:
